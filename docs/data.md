@@ -50,8 +50,8 @@ Two types of imports need be performed.
 
   *eg:*
   ```bash
-    $ cd /downloaded/shapes/single/directory
-    $ shp2pgsql -c -D -s 4269 -I tl_2017_06_bg/tl_2017_06_bg.shp {your-table-name} | psql -d {your-db-name}
+    cd /downloaded/shapes/single/directory
+    shp2pgsql -c -D -s 4269 -I tl_2017_06_bg/tl_2017_06_bg.shp {your-table-name} | psql -d {your-db-name}
   ```
 
   Repeat for all downloaded Shapefiles.
@@ -64,8 +64,8 @@ Two types of imports need be performed.
 
   *eg:*
   ```bash
-    $ cd /downloaded/extracted/asc-zipfile/contents
-    $ cat ACS_17_5YR_B01003_with_ann.csv | psql -d {your-db-name} -c 'COPY {your-table-name} FROM STDIN'
+    cd /downloaded/extracted/asc-zipfile/contents
+    cat ACS_17_5YR_B01003_with_ann.csv | psql -d {your-db-name} -c 'COPY {your-table-name} FROM STDIN'
   ```
 
   Repeat for all *_with_ann.csv files.
@@ -76,8 +76,8 @@ Two types of imports need be performed.
 
   *eg:*
   ```sql
-    # ALTER TABLE {your-table-name} ADD COLUMN geog geography(POINT);
-    # update {your-table-name} t
+     ALTER TABLE {your-table-name} ADD COLUMN geog geography(POINT);
+     update {your-table-name} t
       set geog = ST_SetSRID(
       	ST_MakePoint(
       		CAST(coalesce(t2.intptlon, '0') AS real),
