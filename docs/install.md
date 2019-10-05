@@ -21,8 +21,8 @@ $ sudo apt-get install postgresql-10 postgresql-contrib-10 postgis postgresql-10
 ## Clone Project
 
 ```bash
-$ git clone https://github.com/webanet-australia/postgres-census-poc.git
-$ cd postgres-census-poc
+$ git clone https://github.com/webanet-australia/pg-us-census-poc/
+$ cd pg-us-census-poc
 ```
 
 ---
