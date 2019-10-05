@@ -29,7 +29,9 @@ $ cd pg-us-census-poc
 
 ## Install PostgREST
 
-Use the included executable from the repo: bin/postgrest or download from https://github.com/PostgREST/postgrest/releases/latest
+Use the included executable from the repo(bin/postgrest) 
+
+or download from https://github.com/PostgREST/postgrest/releases/latest
 
 ```bash
 $ tar xfJ postgrest-<version>-<platform>.tar.xz -C bin/postgrest
