@@ -1,4 +1,4 @@
-# ![Logo](https://raw.githubusercontent.com/webanet-au/pg-us-census-poc/master/logo.png) US Census Data in Google Maps with PostgreSQL
+# ![Logo](https://raw.githubusercontent.com/webanet-australia/pg-us-census-poc/master/logo.jpg) US Census Data in Google Maps with PostgreSQL
 ![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 This repo represents a basic proof of concept for using PostgreSQL with the PostGIS extension served with PostgREST to generate Google Maps.
