@@ -22,26 +22,24 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
 - Install the pre-requisites, PostgreSQL, PostGIS and PostgREST. Ubuntu instructions can be found [here](docs/install.md) - windows users should format their hard drive and install Ubuntu immediately but Mac users ought to be able to translate the instructions without too much difficulty.
 - [Download](https://github.com/webanet-australia/postgres-census-poc/archive/master.zip) or clone this repo.
 - Create a new database and restore dump.
-
-    ```bash
-       cd repo/root-directory
-       psql
-    ```
-
-    ```sql
-      CREATE DATABASE {your-db-name};
+   ```bash
+     cd repo/root-directory
+     psql
+   ```
+   ```sql
+     CREATE DATABASE {your-db-name};
       \q
-      ```
+   ```
 
-    ```bash
-      pg_restore -U postgres -d {your-db-name} -1 db/pg-census-poc.dump
-    ```
+   ```bash
+     pg_restore -U postgres -d {your-db-name} -1 db/pg-census-poc.dump
+   ```
 - Edit PostgREST configuration with details of your environment (pretty self explanatory) but the documentation can be [found here](http://postgrest.org/en/v6.0/install.html#configuration)
 - Start PostgREST
 
-  ```bash
-    bin/postgrest conf/postgrest.conf
-  ```
+   ```bash
+     bin/postgrest conf/postgrest.conf
+   ```
 - File open /san-francisco.html in your browser.
 
 ---
