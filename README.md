@@ -10,8 +10,6 @@ the database and wrapping them with some views and functions allows the data to 
 This is just a simple demo, there are plenty of optimizations and work to be done for a production version. It took nearly a week to figure out and get working, so I post this as
 is in the hope it can save somebody that time getting started.
 
-[Demo](http://webanet.com.au/projects/pg-gis-maps/)
-
 #### Screenshot showing block groups for San Francisco
 ![Screenshot](docs/screenshot.jpg)
 
