@@ -1,0 +1,8 @@
+<query schema-version="1.0" lang="en" type="search" sig="CPoXXtiNUp9slke5fOX7X9b_6LU">
+  <search-config>
+    <category-search type="geo" summary-level-code="050" name="All Counties within California"/>
+    <category-search type="geo" summary-level-code="060" name="All County Subdivisions within California"/>
+    <category-search type="geo" summary-level-code="140" name="All Census Tracts within California"/>
+    <category-search type="geo" summary-level-code="150" name="All Block Groups within California"/>
+  </search-config>
+</query>

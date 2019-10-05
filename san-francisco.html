@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Layer: Simple</title>
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <style>
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB0Krm9TrlbK3BFOlB-_WRKcKRANVRWpE"></script>
+
+  </head>
+  <body>
+
+    <div id="map"></div>
+
+    <script>
+
+      var map;
+      var min;
+      var max;
+
+      $(function() {
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 37.7541145, lng: -122.4177917},
+          zoom: 12,
+        });
+
+        $.get('http://localhost:3000/rpc/fn_get_sf_block_groups', function(data) {
+
+            var response = $.parseJSON(data);
+
+            max = response.features.sort(
+                function(a, b) {
+                   return  parseFloat(b.properties.population) - parseFloat(a.properties.population);
+                }
+              )[0].properties.population;
+
+            min = response.features.sort(
+                  function(a, b) {
+                     return parseFloat(b.properties.population) + parseFloat(a.properties.population);
+                  }
+                )[0].properties.population;
+
+            map.data.addGeoJson(response);
+
+            map.data.setStyle(styleFeature);
+
+        });
+
+    });
+
+    /**
+    * Original: https://developers.google.com/maps/documentation/javascript/combining-data
+    * Applies a gradient style based on a census column; eg: total population.
+    * This is the callback passed to data.setStyle() and is called for each row in
+    * the data set.  Check out the docs for Data.StylingFunction.
+    *
+    * @param {google.maps.Data.Feature} feature
+    */
+    function styleFeature(feature) {
+
+        var low = [5, 69, 54];  // color of smallest datum
+        var high = [151, 83, 34];   // color of largest datum
+
+        // delta represents where the value sits between the min and max
+        var delta = (feature.getProperty('population') - min) / (max - min);
+
+        var color = [];
+        for (var i = 0; i < 3; i++) {
+          // calculate an integer color based on the delta
+          color[i] = (high[i] - low[i]) * delta + low[i];
+        }
+
+        // determine whether to show this shape or not
+        var showRow = true;
+        if (feature.getProperty('population') == null ||
+            isNaN(feature.getProperty('population'))) {
+          showRow = false;
+        }
+
+        var outlineWeight = 0.5, zIndex = 1;
+        if (feature.getProperty('state') === 'hover') {
+          outlineWeight = zIndex = 2;
+        }
+
+        return {
+          strokeWeight: outlineWeight,
+          strokeColor: '#fff',
+          zIndex: zIndex,
+          fillColor: 'hsl(' + color[0] + ',' + color[1] + '%,' + color[2] + '%)',
+          fillOpacity: 0.75,
+          visible: showRow
+        };
+    }
+  </script>
+
+  </body>
+</html>
