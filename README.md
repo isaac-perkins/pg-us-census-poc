@@ -1,4 +1,5 @@
-# Showing US Census Data on Google Maps with PostgreSQL
+# ![Logo](https://raw.githubusercontent.com/webanet-au/pg-us-census-poc/master/logo.png) US Census Data in Google Maps with PostgreSQL
+![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 This repo represents a basic proof of concept for using PostgreSQL with the PostGIS extension served with PostgREST to generate Google Maps.
 
@@ -7,7 +8,7 @@ The included database dump is populated with demographics (total population for 
 the database and wrapping them with some views and functions allows the data to very easily be displayed in Google Maps with the maps api using map.data.addGeoJson().
 
 This is just a simple demo, there are plenty of optimizations and work to be done for a production version. It took nearly a week to figure out and get working, so I post this as
-is in the hope it can save somebody that time getting started.
+is in the hope it can save somebody that time getting started on their system.
 
 [Demo](http://webanet.com.au/projects/pg-gis-maps/)
 
@@ -25,23 +26,23 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
 - Create a new database and restore dump.
 
   ```bash
-  cd repo/root-directory
-  psql
+  $ cd repo/root-directory
+  $ psql
   ```
 
   ```sql
-  CREATE DATABASE {your-db-name};
-  \q
+  # CREATE DATABASE {your-db-name};
+  # \q
   ```
 
   ```bash
-  pg_restore -U postgres -d {your-db-name} -1 db/pg-census-poc.dump
+  $  pg_restore -U postgres -d {your-db-name} -1 db/pg-census-poc.dump
   ```
 - Edit PostgREST configuration with details of your environment (pretty self explanatory) but the documentation can be [found here](http://postgrest.org/en/v6.0/install.html#configuration)
 - Start PostgREST
 
   ```bash
-  bin/postgrest conf/postgrest.conf
+  $ bin/postgrest conf/postgrest.conf
   ```
 - File open /san-francisco.html in your browser.
 
