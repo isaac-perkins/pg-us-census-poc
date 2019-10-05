@@ -11,9 +11,9 @@
 ## Install PostgreSQL PostGIS
 
 ```bash
-$ sudo add-apt-repository ppa:ubuntugis
-$ sudo apt-get update
-$ sudo apt-get install postgresql-10 postgresql-contrib-10 postgis postgresql-10-postgis-scripts
+sudo add-apt-repository ppa:ubuntugis
+sudo apt-get update
+sudo apt-get install postgresql-10 postgresql-contrib-10 postgis postgresql-10-postgis-scripts
 ```
 
 ---
@@ -21,8 +21,8 @@ $ sudo apt-get install postgresql-10 postgresql-contrib-10 postgis postgresql-10
 ## Clone Project
 
 ```bash
-$ git clone https://github.com/webanet-australia/pg-us-census-poc/
-$ cd pg-us-census-poc
+git clone https://github.com/webanet-australia/pg-us-census-poc/
+cd pg-us-census-poc
 ```
 
 ---
@@ -34,5 +34,5 @@ Use the included executable from the repo(bin/postgrest)
 or download from https://github.com/PostgREST/postgrest/releases/latest
 
 ```bash
-$ tar xfJ postgrest-<version>-<platform>.tar.xz -C bin/postgrest
+tar xfJ postgrest-<version>-<platform>.tar.xz -C bin/postgrest
 ```
