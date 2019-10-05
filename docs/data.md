@@ -86,3 +86,10 @@ Two types of imports need be performed.
       FROM {your-table-name} t2
       WHERE t.gid = t2.gid
    ```
++ #### Creating your own database
+
+  If you want to create your own database and import data to it you'll need to enable some extensions.
+  
+  ```sql
+  CREATE EXTENSION postgis;
+  ```
