@@ -24,23 +24,23 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
 - Create a new database and restore dump.
 
   ```bash
-  $ cd repo/root-directory
-  $ psql
+  cd repo/root-directory
+  psql
   ```
 
   ```sql
-  # CREATE DATABASE {your-db-name};
-  # \q
+  CREATE DATABASE {your-db-name};
+  \q
   ```
 
   ```bash
-  $  pg_restore -U postgres -d {your-db-name} -1 db/pg-census-poc.dump
+  pg_restore -U postgres -d {your-db-name} -1 db/pg-census-poc.dump
   ```
 - Edit PostgREST configuration with details of your environment (pretty self explanatory) but the documentation can be [found here](http://postgrest.org/en/v6.0/install.html#configuration)
 - Start PostgREST
 
   ```bash
-  $ bin/postgrest conf/postgrest.conf
+  bin/postgrest conf/postgrest.conf
   ```
 - File open /san-francisco.html in your browser.
 
