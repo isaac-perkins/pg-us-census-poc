@@ -28,7 +28,7 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
   psql
   ```
 
-  ```sql
+  ```DML
   CREATE DATABASE {your-db-name};
   \q
   ```
