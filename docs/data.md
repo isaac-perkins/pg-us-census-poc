@@ -77,12 +77,12 @@ Two types of imports need be performed.
   *eg:*
   ```sql
      ALTER TABLE {your-table-name} ADD COLUMN geog geography(POINT);
-     update {your-table-name} t
-      set geog = ST_SetSRID(
+     UPDATE {your-table-name} t
+      SET geog = ST_SetSRID(
       	ST_MakePoint(
       		CAST(coalesce(t2.intptlon, '0') AS real),
       		CAST(coalesce(t2.intptlat, '0') AS real)
       	),4326)::geography
-      from {your-table-name} t2
-      where t.gid = t2.gid
+      FROM {your-table-name} t2
+      WHERE t.gid = t2.gid
    ```
