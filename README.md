@@ -7,7 +7,7 @@ The included database dump is populated with demographics (total population for 
 the database and wrapping them with some views and functions allows the data to very easily be displayed in Google Maps with the maps api using map.data.addGeoJson().
 
 This is just a simple demo, there are plenty of optimizations and work to be done for a production version. It took nearly a week to figure out and get working, so I post this as
-is in the hope it can save somebody that time getting started on their system.
+is in the hope it can save somebody that time getting started.
 
 [Demo](http://webanet.com.au/projects/pg-gis-maps/)
 
