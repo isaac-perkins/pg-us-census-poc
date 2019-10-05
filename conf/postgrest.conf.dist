@@ -1,6 +1,0 @@
-  db-uri = "postgres://{your-db-username}:{your-db-password}@localhost:5432/{your-db-name}"
-  db-schema = "public"
-  db-anon-role = "anon"
-  db-pool = 10
-  db-pool-timeout = 10
-  jwt-secret = "big-long-string-to-use-as-jwt-secret-if-authentication-is-setup"
