@@ -19,7 +19,7 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
 
 ## Installation and Usage
 
-- Install the pre-requisites, PostgreSQL, PostGIS and PostgREST. Ubuntu instructions can be found [here](docs/install.md) - windows users should format their hard drive and install Ubuntu immediately but Mac users ought to be able to translate the instructions without too much difficulty.
+- Install the pre-requisites, PostgreSQL, PostGIS and PostgREST. Ubuntu instructions can be found [here](docs/install.md).
 - [Download](https://github.com/webanet-australia/postgres-census-poc/archive/master.zip) or clone this repo.
 - Create a new database and restore dump.
    ```bash
