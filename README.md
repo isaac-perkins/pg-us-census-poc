@@ -20,18 +20,18 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
 
 - Install the pre-requisites, PostgreSQL, PostGIS and PostgREST. Ubuntu instructions can be found [here](docs/install.md).
 - [Download](https://github.com/webanet-australia/postgres-census-poc/archive/master.zip) or clone this repo.
-- Create a new database restore dump.
+- Create a new database and add a role for PostgREST.
    ```bash
      cd repo/root-directory
      psql
    ```
    ```sql
      CREATE DATABASE {your-db-name};
+     CREATE ROLE anon NOSUPERUSER NOINHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
       \q
    ```
-- Add a role for PostgREST and restore db dump
+- Restore db dump
    ```bash
-     CREATE ROLE anon NOSUPERUSER NOINHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
      pg_restore -U postgres -d {your-db-name} -1 db/pg-census-poc.dump
    ```
 - Edit PostgREST configuration with details of your environment (pretty self explanatory) but the documentation can be [found here](http://postgrest.org/en/v6.0/install.html#configuration)
