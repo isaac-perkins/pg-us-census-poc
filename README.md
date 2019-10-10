@@ -39,7 +39,7 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
    ```bash
      bin/postgrest conf/postgrest.conf
    ```
-- File open /san-francisco.html in your browser.
+- File open /public/index.html in your browser.
 
 ---
 
