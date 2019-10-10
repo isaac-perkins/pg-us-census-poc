@@ -27,7 +27,7 @@ cd pg-us-census-poc
 
 ---
 
-## Install PostgREST
+## PostgREST
 
 Download an executable for your OS from https://github.com/PostgREST/postgrest/releases/latest and move it to the bin directory for this repo.
 
