@@ -88,7 +88,7 @@ Two types of imports need be performed.
    ```
 + #### Creating your own database
 
-  If you want to create your own database and import data to it you'll need to enable some extensions.
+  If you want to create or use your own database then use these techniques you'll need to enable the PostGIS extension within your database.
   
   ```sql
   CREATE EXTENSION postgis;
