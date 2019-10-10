@@ -39,8 +39,8 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
    ```bash
      bin/postgrest conf/postgrest.conf
    ```
-- Edit public/index.html, enter {Your-Google-Maps-API-Key}
-- File open public/index.html in your browser.
+- Edit public/index.html, replace {Your-Google-Maps-API-Key} with a Google Maps API key created with their [API Dashboard](https://console.cloud.google.com/apis/dashboard).
+- File open public/index.html in your browser - marvel at the brilliance (and speed) of the Postgres database.
 
 ---
 
