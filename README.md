@@ -23,12 +23,11 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
 - Create a new database and add a role for PostgREST.
    ```bash
      cd repo/root-directory
-     psql
+     psql -U postgres
    ```
    ```sql
      CREATE DATABASE {your-db-name};
      CREATE ROLE anon NOSUPERUSER NOINHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
-      \q
    ```
 - Restore db dump
    ```bash
