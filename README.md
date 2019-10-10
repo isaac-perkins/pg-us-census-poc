@@ -14,11 +14,11 @@ This is just a simple demo, there are plenty of optimizations and work to be don
 
 In the setup code below **replace**: *{your-db-name}* *{your-table-name}* *{your-db-username}* *{your-db-password}*
 
-with values for your environment. (Yes, the curly brackets too). Run commands from the repo's root directory.
+with values for your environment. (Yes, the curly brackets too). Run commands from this repo's root directory.
 
 ## Installation and Usage
 
-- Install the pre-requisites, PostgreSQL, PostGIS and PostgREST. Ubuntu instructions can be found [here](docs/install.md).
+- Install the pre-requisites, PostgreSQL, PostGIS and PostgREST. Instructions (for Ubuntu) can be found [here](docs/install.md), though should easily translate to other OS's.
 - [Download](https://github.com/webanet-australia/postgres-census-poc/archive/master.zip) or clone this repo.
 - Create a new database and add a role for PostgREST.
    ```bash
