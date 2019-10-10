@@ -39,7 +39,8 @@ with values for your environment. (Yes, the curly brackets too). Run commands fr
    ```bash
      bin/postgrest conf/postgrest.conf
    ```
-- File open /public/index.html in your browser.
+- Edit public/index.html, enter {Your-Google-Maps-API-Key}
+- File open public/index.html in your browser.
 
 ---
 
