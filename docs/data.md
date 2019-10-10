@@ -93,3 +93,4 @@ Two types of imports need be performed.
   ```sql
   CREATE EXTENSION postgis;
   ```
+Further details at the PostGIS install page [here](https://postgis.net/install/)
