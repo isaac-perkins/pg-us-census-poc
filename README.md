@@ -1,7 +1,7 @@
 # ![Logo](https://raw.githubusercontent.com/webanet-australia/pg-us-census-poc/master/logo.jpg) U.S Census Google Maps with PostgreSQL
 ![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-This repo represents a basic proof of concept for using PostgreSQL with the PostGIS extension served with PostgREST to generate Google Maps. See it in action [here](http://census.preset.cloud/). 
+This repo represents a basic proof of concept for using PostgreSQL with the PostGIS extension served with PostgREST to generate Google Maps. 
 
 The included database dump is populated with demographics (total population for San Francisco at block group level) from
 [factfinder.census.gov](https://factfinder.census.gov) and [TIGER/Line® Shapefiles](https://www.census.gov/cgi-bin/geo/shapefiles/). Linking these tables within
